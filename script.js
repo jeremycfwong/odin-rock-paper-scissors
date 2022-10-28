@@ -32,8 +32,8 @@ function addScore(score, type) {
 function resetGame() {
     score = 0
     cScore = 0
-    document.getElementById('score').innerText = ``
-    document.getElementById('cScore').innerText = ``
+    document.getElementById('score').innerText = `0 / 5`
+    document.getElementById('cScore').innerText = `0 / 5`
 }
 
 const buttons = document.querySelectorAll("button");
@@ -52,9 +52,9 @@ buttons.forEach(btn => {
         
         if (score == 5 || cScore == 5) {
             if (score == 5){
-                    document.getElementById("result").innerText = "Gameover! You are the winner!!"  
+                alert("Gameover! You are the winner!!")
             } else {
-                    document.getElementById("result").innerText = "Gameover! Computer is the winner!!"  
+                alert("Gameover! Computer is the winner!!")
             }
 
             resetGame()
